@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Product Card</title>
+  <style>
+    :root {
+      --bg-green: #d9f5d9;       /* light green background */
+      --card-bg: #ffffff;
+      --border-black: #000000;
+      --text: #1a1a1a;
+      --muted: #555;
+      --radius: 12px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--bg-green);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      border: 3px solid var(--border-black);
+      border-radius: var(--radius);
+      width: 400px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #fafafa;
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .product-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+      background-color: var(--border-black);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #333;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 500px) {
+      .product-card {
+        width: 90%;
+      }
+      .product-card img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <img src="web.jpg">
+    <div class="product-details">
+      <h2 class="product-title">Smartphone Z7</h2>
+      <p class="product-desc">6.5\" AMOLED Display · 8GB RAM · 128GB Storage</p>
+      <div class="price">₹24,999</div>
+      <button class="add-to-cart">Add to Cart</button>
+      <p class="note">Free delivery · 1-year warranty</p>
+    </div>
+  </div>
+
+</body>
+</html>
